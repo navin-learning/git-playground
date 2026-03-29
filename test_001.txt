@@ -1,2 +1,11 @@
 1. main branch - initial text data
 2. modified file on feature/feature_1 branch
+2.0 to create new branch and switch to that new branch
+    either
+    git checkout -b feature/feature_1 
+    or
+    git branch feature/feature_1
+    git checkout feature/feature_1
+2.1 for first push from new branch use -u flag like, "git push -u origin feature/feature_1"
+    this is to enable "tracking" newly created remote branch
+2.2 when you switch branches, Git updates the working directory to match the branch you're moving to
