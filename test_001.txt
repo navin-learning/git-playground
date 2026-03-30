@@ -9,3 +9,18 @@
 2.1 for first push from new branch use -u flag like, "git push -u origin feature/feature_1"
     this is to enable "tracking" newly created remote branch
 2.2 when you switch branches, Git updates the working directory to match the branch you're moving to
+2.3 added this line, but not commited yet, see what happens if I switch branches
+    this shows 
+    $ git branch
+    * feature/feature_1
+  main
+    $ git checkout main
+    error: Your local changes to the following files would be overwritten by checkout:
+            test_001.txt
+    Please commit your changes or stash them before you switch branches.
+    Aborting
+2.4 commit and push this change, with combined git add and git commit cmd, using
+    git commit -am "Your message"
+    am - add amd commit msg
+    This stages and commits all tracked files that have been modified (but does NOT include new/untracked files).
+    Also try multi line commt msg in this push
