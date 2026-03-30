@@ -41,3 +41,34 @@
     no changes added to commit (use "git add" and/or "git commit -a")    
 2.6 instead of git push origin feature/feature_1 (or git push origin main) you can use
     git push origin HEAD is a shortcut that tells Git to push your current local branch to the remote branch with the exact same name. 
+3 git merge
+
+3.0 you are already working on feature branch and merging code 
+    git checkout feature/feature_1
+
+    # Make sure all changes are committed
+    git status  # Should show "nothing to commit, working tree clean"
+
+    # Switch to main
+    git checkout main
+
+    # Pull latest changes (if collaborating)
+    git pull origin main
+
+    # Merge feature branch
+    git merge feature/feature_1
+
+    # Push updated main
+    git push origin main
+
+3.1 starting from main branch, creating branch and then merge
+    git checkout main
+    git pull origin main  # "Ensuring I have latest changes"
+    git checkout -b feature/new-feature
+    # ... make changes ...
+    git add .
+    git commit -m "Add new feature"
+    git checkout main
+    git pull origin main  # "Checking for any new changes before merge"
+    git merge feature/new-feature
+    git push origin main
