@@ -24,3 +24,20 @@
     am - add amd commit msg
     This stages and commits all tracked files that have been modified (but does NOT include new/untracked files).
     Also try multi line commt msg in this push
+2.5 note that, when you have committed code changes and not pushed, changes are in local repo now and
+    if you again make changes in working dir (not commitgit statusted), in git status it will be reflected as 
+    two differences, first difference between local and remote repo and second difference in working dir 
+    and local repo
+    $ git status
+    On branch feature/feature_1
+    Your branch is ahead of 'origin/feature/feature_1' by 1 commit.
+      (use "git push" to publish your local commits)
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   test_001.txt
+
+    no changes added to commit (use "git add" and/or "git commit -a")    
+2.6 instead of git push origin feature/feature_1 (or git push origin main) you can use
+    git push origin HEAD is a shortcut that tells Git to push your current local branch to the remote branch with the exact same name. 
